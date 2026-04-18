@@ -1,63 +1,76 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+# Site Settings
+locale                   : "en-US"
+title                    : "Jaehyun Yi"
+title_separator          : "-"
+subtitle                 :
+name                     : "Jaehyun Yi"
+description              : "Personal website of Jaehyun Yi. Research, projects, notes, and writing on robotics, teleoperation, and engineering."
+url                      : "https://jyi48.github.io"
+baseurl                  : ""
+repository               : "jyi48/jyi48.github.io"
+teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
+# breadcrumbs            : false # true, false (default)
+words_per_minute         : 200
+enable_copy_code_button  : true
 
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: Jaehyun Yi
 email: ljhtheman@gmail.com
-description: >-
-  Personal website of Jaehyun Yi. Research, projects, notes, and writing on
-  robotics, teleoperation, and engineering.
-url: "https://jyi48.github.io"
-baseurl: ""
-#twitter_username: username
 github_username: jyi48
-minimal_mistakes_skin: default
-search: true
 
 # Build settings
-markdown: kramdown
-remote_theme: mmistakes/minimal-mistakes
-# Outputting
-permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
-timezone: Asia/Seoul # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+remote_theme: mmistakes/minimal-mistakes@4.28.0
+minimal_mistakes_skin: default # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
-include:
-  - _pages
+comments:
+  provider               : # false (default), "disqus", "discourse", "facebook", "utterances", "giscus", "custom"
+  disqus:
+    shortname            :
+  discourse:
+    server               :
+  facebook:
+    appid                :
+    num_posts            :
+    colorscheme          :
+  utterances:
+    theme                : # "github-light" (default), "github-dark"
+    issue_term           : # "pathname" (default)
+  giscus:
+    repo_id              :
+    category_name        :
+    category_id          :
+    discussion_term      :
+    reactions_enabled    :
+    theme                :
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+atom_feed:
+  path                   : # blank (default) uses feed.xml
 
-# Plugins (previously gems:)
-plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jemoji
-  - jekyll-include-cache
+search                   : true
+search_full_content      : true
 
+# SEO Related
+google_site_verification : # Replace with your Google Search Console verification ID
+bing_site_verification   :
+naver_site_verification  :
+
+og_image                 : "/assets/images/bio-photo.jpg"
+social:
+  type                   : Person
+  name                   : "Jaehyun Yi"
+  links:
+    - "https://github.com/jyi48"
+    - "https://www.linkedin.com/in/jaehyun-yi/"
+    - "https://scholar.google.com/citations?user=0xIx4uoAAAAJ&hl=ko"
+
+# Analytics
+analytics:
+  provider               : # false (default), "google", "google-universal", "google-gtag", "custom"
+  google:
+    tracking_id          : # Replace with your GA tracking ID, e.g. "G-XXXXXXXXXX"
+    anonymize_ip         : true
+
+# Site Author
 author:
   name   : "Jaehyun Yi"
   avatar : "/assets/images/bio-photo.jpg"
@@ -80,12 +93,105 @@ author:
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/jaehyun-yi/"
 
+# Site Footer
 footer:
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/jyi48"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/jaehyun-yi/"
 
+# Reading Files
+include:
+  - .htaccess
+  - _pages
+exclude:
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - vendor
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - Capfile
+  - CHANGELOG
+  - Gemfile
+  - Gruntfile.js
+  - LICENSE
+  - log
+  - node_modules
+  - package.json
+  - Rakefile
+  - README
+  - tmp
+keep_files:
+  - .git
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Outputting
+permalink: /:categories/:title/
+paginate: 5
+paginate_path: /page:num/
+timezone: Asia/Seoul
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
+
+whitelist:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
+
+# Archives
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
+# HTML Compression
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
+
+# Page Defaults
 defaults:
   # _posts
   - scope:
@@ -105,10 +211,3 @@ defaults:
     values:
       layout: single
       author_profile: true
-
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
