@@ -65,10 +65,10 @@ social:
 
 # Analytics
 analytics:
-  provider               : # false (default), "google", "google-universal", "google-gtag", "custom"
+  provider               : "google-gtag"
   google:
-    tracking_id          : # Replace with your GA tracking ID, e.g. "G-XXXXXXXXXX"
-    anonymize_ip         : true
+    tracking_id          : "G-4R7L3KEMK8"
+    anonymize_ip         : false
 
 # Site Author
 author:
