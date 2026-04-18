@@ -119,7 +119,7 @@ analytics:
 author:
   name             : "Jaehyun Yi"
   avatar           : "/assets/images/bio-photo.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Staff Engineer, Samsung Electronics<br>Ph.D. in Mechanical Engineering, SNU<br>B.S. in Mechanical Engineering, Georgia Tech"
+  bio              : "Staff Engineer @ Samsung Electronics<br>Ph.D. in Mechanical Engineering, SNU<br>B.S. in Mechanical Engineering, Georgia Tech"
   location         : "Seoul, South Korea"
   email            :
   links:
