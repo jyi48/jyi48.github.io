@@ -90,14 +90,14 @@ a:hover { color: lighten(#60a5fa, 12%); }
 
 .author__name {
   font-family: $sans-serif;
-  font-size: 1.05rem;
-  font-weight: 600;
+  font-size: 1.2rem;
+  font-weight: 700;
 }
 
 .author__bio {
   font-family: $sans-serif;
-  font-size: 0.88rem;
-  line-height: 1.75;
+  font-size: 0.92rem;
+  line-height: 1.8;
   color: $text-muted;
 
   br { display: block; content: ""; margin-top: 0.1rem; }
@@ -105,11 +105,11 @@ a:hover { color: lighten(#60a5fa, 12%); }
 
 .author__urls {
   font-family: $sans-serif;
-  font-size: 0.88rem;
+  font-size: 0.92rem;
 }
 
 .author__urls-wrapper .btn {
-  font-size: 0.88rem;
+  font-size: 0.92rem;
 }
 
 // ─── Home — grid ──────────────────────────────────────────────────────────────
@@ -196,9 +196,17 @@ a:hover { color: lighten(#60a5fa, 12%); }
 
 // ─── Publications page typography ────────────────────────────────────────────
 .page__content {
-  h1 { font-size: 1.6rem; font-weight: 700; margin-bottom: 1rem; }
-  h2 { font-size: 1.05rem; font-weight: 600; margin-top: 1.8rem; margin-bottom: 0.6rem; color: $accent; }
-  ol li { font-size: 0.82rem; line-height: 1.7; }
+  h1 { font-size: 2rem; font-weight: 700; margin-bottom: 1.5rem; }
+  h2 {
+    font-size: 1.0rem;
+    font-weight: 600;
+    margin-top: 2.2rem;
+    margin-bottom: 0.7rem;
+    color: $text-strong;
+    border-bottom: 1px solid $border-soft;
+    padding-bottom: 0.3rem;
+  }
+  ol li { font-size: 0.78rem; line-height: 1.75; text-align: justify; }
   ul li { font-size: 0.85rem; }
 }
 
