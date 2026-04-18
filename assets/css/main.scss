@@ -76,6 +76,13 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+// ─── Author avatar — force square crop so portrait photo shows as circle ──────
+.author__avatar img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center 18%;
+}
+
 // ─── Author sidebar ───────────────────────────────────────────────────────────
 .author__name {
   font-family: "Space Grotesk", $sans-serif;
@@ -288,6 +295,12 @@ h1, h2, h3, h4, h5, h6 {
       &:hover { color: $accent; }
     }
   }
+}
+
+.pub-authors {
+  margin: 0.2rem 0 0.15rem;
+  color: $text-muted;
+  font-size: 0.85rem;
 }
 
 .publication-meta {
