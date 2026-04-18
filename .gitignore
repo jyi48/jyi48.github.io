@@ -3,3 +3,5 @@ _site
 .jekyll-metadata
 Gemfile.lock
 record.md
+screenshot-layouts.png
+assets/cv.tex
