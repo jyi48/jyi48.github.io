@@ -3,6 +3,24 @@ permalink: /about/
 title: "About"
 ---
 
-Tempor velit sint sunt ipsum tempor enim ad qui ullamco. Est dolore anim ad velit duis dolore minim sunt aliquip amet commodo labore. Ut eu pariatur aute ea aute excepteur laborum. Esse ea esse excepteur minim mollit qui cillum excepteur ex dolore magna. Labore deserunt fugiat incididunt incididunt sint ea. Consequat dolore aute laboris quis proident quis non et est consectetur ex eiusmod sit culpa.
+I am Jaehyun Yi, a robotics engineer working on teleoperation, manipulation, and human-robot interaction.
 
-Cupidatat ea do et in excepteur in. Ad nostrud ut est esse eu duis ea sunt eiusmod. Aliquip tempor veniam sint elit fugiat. Velit incididunt laboris amet incididunt labore dolore irure velit excepteur commodo deserunt laborum. Consectetur eu fugiat veniam veniam Lorem labore magna eiusmod. Ea occaecat reprehenderit pariatur consectetur minim labore ut aliquip.
+My work sits at the intersection of robot control, embodied interaction, and practical system integration. This site is where I collect selected projects, technical notes, and writing.
+
+## Interests
+
+- Robotics
+- Teleoperation
+- Manipulation
+- Human-robot interaction
+- System integration
+
+## What you'll find here
+
+- Project summaries and demos
+- Research and engineering notes
+- Writing on robotics and real-world deployment
+
+## Contact
+
+You can reach me through GitHub or LinkedIn. I will add direct links for my CV and Google Scholar here as the site content is finalized.
