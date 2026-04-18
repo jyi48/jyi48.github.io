@@ -19,12 +19,12 @@ $type-size-6: 0.7em !default;
 @import "minimal-mistakes";
 
 // ─── Tokens ───────────────────────────────────────────────────────────────────
-$accent:      #0f766e;
-$accent-soft: #f0fdfa;
-$text-strong: #0f172a;
-$text-muted:  #475569;
-$border-soft: #e2e8f0;
-$surface:     #ffffff;
+$accent:      #60a5fa;
+$accent-soft: rgba(96, 165, 250, 0.12);
+$text-strong: #f1f5f9;
+$text-muted:  #94a3b8;
+$border-soft: rgba(255, 255, 255, 0.1);
+$surface:     rgba(255, 255, 255, 0.04);
 
 // ─── Base typography ──────────────────────────────────────────────────────────
 body {
@@ -33,24 +33,22 @@ body {
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: $text-strong;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $sans-serif;
   font-weight: 600;
   letter-spacing: -0.01em;
-  color: $text-strong;
 }
 
+a { color: $accent; }
+a:hover { color: lighten(#60a5fa, 12%); }
+
 // ─── Layout ───────────────────────────────────────────────────────────────────
-.page__inner-wrap {
-  margin-top: 1.5rem;
-}
+.page__inner-wrap { margin-top: 1.5rem; }
 
 .page__content {
   font-family: $sans-serif;
-  color: $text-strong;
   font-size: 0.9rem;
   line-height: 1.8;
 }
@@ -58,10 +56,6 @@ h1, h2, h3, h4, h5, h6 {
 // ─── Masthead ─────────────────────────────────────────────────────────────────
 .masthead {
   border-bottom: 1px solid $border-soft;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-
   &__inner-wrap {
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
@@ -72,70 +66,46 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $sans-serif;
   font-size: 0.95rem;
   font-weight: 600;
-  letter-spacing: -0.01em;
 }
 
-.greedy-nav {
-  background: transparent;
-
-  a {
-    font-family: $sans-serif;
-    font-weight: 500;
-    font-size: 0.85rem;
-    letter-spacing: 0.01em;
-  }
-}
-
-// ─── Author avatar ────────────────────────────────────────────────────────────
-.author__avatar img {
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  object-position: center 18%;
+.greedy-nav a {
+  font-family: $sans-serif;
+  font-weight: 500;
+  font-size: 0.85rem;
 }
 
 // ─── Author sidebar ───────────────────────────────────────────────────────────
+.author__avatar {
+  max-width: 88px;
+  margin: 0 auto 0.6rem;
+
+  img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center 18%;
+  }
+}
+
+.author__content { text-align: left; }
+
 .author__name {
   font-family: $sans-serif;
   font-size: 0.95rem;
   font-weight: 600;
-  letter-spacing: 0;
 }
 
 .author__bio {
   font-family: $sans-serif;
-  font-size: 0.82rem;
-  line-height: 1.6;
+  font-size: 0.78rem;
+  line-height: 1.75;
   color: $text-muted;
+
+  br { display: block; content: ""; margin-top: 0.1rem; }
 }
 
 .author__urls {
   font-family: $sans-serif;
-  font-size: 0.82rem;
-}
-
-// ─── Home — hero ──────────────────────────────────────────────────────────────
-.home-hero {
-  padding: 2rem 0 1rem;
-}
-
-.home-hero h1 {
-  margin: 0;
-  font-family: $sans-serif;
-  font-size: clamp(1.6rem, 3.5vw, 2.6rem);
-  font-weight: 700;
-  line-height: 1.1;
-  letter-spacing: -0.01em;
-  color: $text-strong;
-}
-
-.home-summary {
-  max-width: 720px;
-  margin: 1.2rem 0 0;
-  font-family: $sans-serif;
-  color: $text-muted;
-  font-size: 0.95rem;
-  font-weight: 400;
-  line-height: 1.8;
+  font-size: 0.8rem;
 }
 
 // ─── Home — grid ──────────────────────────────────────────────────────────────
@@ -143,40 +113,31 @@ h1, h2, h3, h4, h5, h6 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
-  margin-top: 2.5rem;
+  margin-top: 2rem;
 }
 
 .home-panel {
-  padding: 1.2rem 1.4rem;
+  padding: 1.1rem 1.3rem;
   border: 1px solid $border-soft;
-  border-radius: 12px;
+  border-radius: 10px;
   background: $surface;
-  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04), 0 8px 24px rgba(15, 23, 42, 0.04);
-  transition: box-shadow 0.2s;
-
-  &:hover {
-    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06), 0 12px 32px rgba(15, 23, 42, 0.08);
-  }
 
   h2 {
     margin-top: 0;
-    margin-bottom: 0.7rem;
-    font-size: 0.95rem;
-  }
-
-  ul, p {
+    margin-bottom: 0.6rem;
     font-size: 0.88rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: $accent;
   }
 
-  p:last-child {
-    margin-bottom: 0;
-  }
+  ul, p { font-size: 0.85rem; margin-bottom: 0; }
+  ul { padding-left: 1.2em; }
+  li { margin-bottom: 0.2rem; }
 }
 
 // ─── Home — section ───────────────────────────────────────────────────────────
-.home-section {
-  margin-top: 2.5rem;
-}
+.home-section { margin-top: 2.5rem; }
 
 .home-section-heading {
   display: flex;
@@ -185,76 +146,63 @@ h1, h2, h3, h4, h5, h6 {
   gap: 1rem;
   margin-bottom: 1rem;
 
-  h2 {
-    margin: 0;
-    font-size: 1.05rem;
-  }
+  h2 { margin: 0; font-size: 1rem; }
 
   a {
     color: $accent;
-    font-size: 0.82rem;
+    font-size: 0.8rem;
     font-weight: 500;
     text-decoration: none;
-
     &:hover { text-decoration: underline; }
   }
 }
 
 // ─── Publications ─────────────────────────────────────────────────────────────
-.publication-list {
-  display: grid;
-  gap: 0.75rem;
-}
+.publication-list { display: grid; gap: 0.65rem; }
 
 .publication-item {
-  padding: 1rem 1.2rem;
+  padding: 0.9rem 1.1rem;
   border: 1px solid $border-soft;
-  border-radius: 12px;
+  border-radius: 10px;
   background: $surface;
-  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
-  transition: box-shadow 0.2s;
+  transition: border-color 0.15s;
 
-  &:hover {
-    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
-  }
+  &:hover { border-color: $accent; }
 
   h3 {
-    margin: 0 0 0.25rem;
+    margin: 0 0 0.2rem;
     font-size: 0.88rem;
     font-weight: 600;
 
-    a {
-      color: $text-strong;
-      text-decoration: none;
-
-      &:hover { color: $accent; }
-    }
+    a { color: $text-strong; text-decoration: none; &:hover { color: $accent; } }
   }
 }
 
 .pub-authors {
-  margin: 0.15rem 0;
-  font-family: $sans-serif;
+  margin: 0.1rem 0;
+  font-size: 0.78rem;
   color: $text-muted;
-  font-size: 0.8rem;
 }
 
 .publication-meta {
   margin: 0;
-  font-family: $sans-serif;
+  font-size: 0.78rem;
   color: $text-muted;
-  font-size: 0.8rem;
-  font-weight: 400;
+}
+
+// ─── Blue buttons ─────────────────────────────────────────────────────────────
+.btn--blue {
+  background: $accent-soft !important;
+  border-color: $accent !important;
+  color: $accent !important;
+  &:hover {
+    background: $accent !important;
+    color: #fff !important;
+  }
 }
 
 // ─── Responsive ───────────────────────────────────────────────────────────────
 @media (max-width: 900px) {
-  .home-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .home-section-heading {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+  .home-grid { grid-template-columns: 1fr; }
+  .home-section-heading { flex-direction: column; align-items: flex-start; }
 }
